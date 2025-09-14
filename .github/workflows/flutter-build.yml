@@ -64,6 +64,11 @@ jobs:
 
   build-for-windows-flutter:
     name: ${{ matrix.job.target }}
+    env:
+      RUSTDESK_API_SERVER: 'http://desk.godin.com.cn:21114'
+      RUSTDESK_RELAY: 'desk.godin.com.cn:21117'
+      RUSTDESK_RENDEZVOUS_SERVER: 'desk.godin.com.cn:21116'
+      RUSTDESK_KEY: 'dHlen3vC96EW9CU3zmVm8LxkpgWDfetKNpSsHdgMGUA='
     needs: [build-RustDeskTempTopMostWindow, generate-bridge]
     runs-on: ${{ matrix.job.os }}
     strategy:
@@ -284,6 +289,11 @@ jobs:
   # The fallback for the flutter version, we use Sciter for 32bit Windows.
   build-for-windows-sciter:
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
+    env:
+      RUSTDESK_API_SERVER: 'http://desk.godin.com.cn:21114'
+      RUSTDESK_RELAY: 'desk.godin.com.cn:21117'
+      RUSTDESK_RENDEZVOUS_SERVER: 'desk.godin.com.cn:21116'
+      RUSTDESK_KEY: 'dHlen3vC96EW9CU3zmVm8LxkpgWDfetKNpSsHdgMGUA='
     runs-on: ${{ matrix.job.os }}
     # Temporarily disable this action due to additional test is needed.
     # if: false
@@ -791,6 +801,11 @@ jobs:
   build-rustdesk-android:
     needs: [generate-bridge]
     name: build rustdesk android apk ${{ matrix.job.target }}
+    env:
+      RUSTDESK_API_SERVER: 'http://desk.godin.com.cn:21114'
+      RUSTDESK_RELAY: 'desk.godin.com.cn:21117'
+      RUSTDESK_RENDEZVOUS_SERVER: 'desk.godin.com.cn:21116'
+      RUSTDESK_KEY: 'dHlen3vC96EW9CU3zmVm8LxkpgWDfetKNpSsHdgMGUA='
     runs-on: ${{ matrix.job.os }}
     strategy:
       fail-fast: false
