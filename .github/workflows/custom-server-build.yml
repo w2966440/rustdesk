@@ -12,7 +12,7 @@ on:
       # Custom server inputs - 自定义服务器输入
       rendezvous-server:
         type: string
-        description: 'ID Server (e.g., desk1.godin.com.cn:21116)'
+        description: 'ID Server (e.g., desk.godin.com.cn:21116)'
         required: false
       api-server:
         type: string
