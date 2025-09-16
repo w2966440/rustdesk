@@ -12,15 +12,15 @@ on:
       # Custom server inputs - 自定义服务器输入
       rendezvous-server:
         type: string
-        description: 'ID Server (e.g., desk.godin.com.cn:21116)'
+        description: 'ID Server (e.g., localhost:21116)'
         required: false
       api-server:
         type: string
-        description: 'API Server (e.g., http://desk.godin.com.cn:21114)'
+        description: 'API Server (e.g., http://localhost:21114)'
         required: false
       relay-server:
         type: string
-        description: 'Relay Server (e.g., desk.godin.com.cn:21117)'
+        description: 'Relay Server (e.g., localhost:21117)'
         required: false
       rs-pub-key:
         type: string
